@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maxiii's Website</title>
+    <link rel="stylesheet" href="tailwind.css">
+    <script>
+        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark')
+        }
+    </script>
+</head>
+<body class="font-sans bg-gradient-to-br from-violet-800 via-pink-700 to-red-700">
+    <nav class="container mx-auto flex mt-5 bg-white dark:bg-slate-800 rounded-lg py-3 px-3">
+        <ul class="font-bold text-2xl pl-3">
+            <h1 class="text-center dark:text-white flex">
+                <a href="/public/index.html" class="pt-1">Maxiii's Website</a>
+            </h1>
+        </ul>
+        <ul class="flex flex-1 justify-end items-center dark:text-white gap-12 pr-3 ">
+                <button id="theme-toggle" type="button" class="bg-gray-200 dark:bg-slate-700 text-gray-500 dark:text-gray-400 hover:animate-bounce rounded-lg text-sm p-2.5">
+                    <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+                    <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+                </button>
+                <a href="/public/tech.html" class="cursor-pointer">Tech</a>
+                <a href="/Public/achievements.html" class="cursor-pointer">Easy Steam Achievements</a>
+                <a href="https://github.com/maxiamzocken/" class="cursor-pointer">Github</a>
+                <button id="dropdownDefault" data-dropdown-toggle="dropdown" class="text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">Socials <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button>
+
+                <div id="dropdown" class="hidden z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700">
+                    <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefault">
+                        <li>
+                        <a href="https://www.youtube.com/channel/UCKXu4_UtUGvSTRf_FZBMjpQ" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Youtube</a>
+                        </li>
+                        <li>
+                        <a href="https://instagram.com/maxi_am_zocken" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Instagram</a>
+                        </li>
+                        <li>
+                        <a href="https://twitter.com/Maxi_am_zocken" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Twitter</a>
+                        </li>
+                        <li>
+                        <a href="https://www.komoot.com/user/2095673550135" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Komoot</a>
+                        </li>
+                    </ul>
+                </div>
+        </ul>
+    </nav>
+    <div id="achievements welcome" class="container mx-auto flex items-center mt-10 bg-gray-200 shadow-xl dark:shadow-slate-800 dark:bg-slate-800 rounded-lg p-0">
+        <img src="pictures/steamicon.png" alt="Setup" class="w-72 rounded-l-lg lg:max-h-fit sm:max-h-48">
+        <h1 class="dark:text-white px-5 text-xl">
+            <div class="text-blue-600">
+                SteamID : Void_Maxiii
+            </div>
+            I'm always trying to achieve a higher completion rate on my steam profile,<br/> so here are some steam games, which are easy to complete <br/><br/> 
+        </h1>
+    </div>
+    <div id="achievement grid" class="mt-7">
+        <div class="container mx-auto grid gap-5 grid-cols-3">
+            <div class="container dark:text-white bg-gray-200 shadow-lg dark:shadow-slate-800 dark:bg-slate-800 rounded-lg px-5 py-5">
+                <h1>
+                    Paid Program
+                    <div class="font-semibold">
+                        Wallpaper Engine
+                    </div>
+                    <div class="text-gray-300">
+                        <a class="text-blue-500" href="https://www.youtube.com/watch?v=HIXMbqi2r5I&list=PLPQxrgytJlBSQP1HxbYUFFxlhMoWEZLMt"><br/>-> Guide</a>
+                    </div>
+                </h1>
+            </div>
+            <div class="container dark:text-white bg-gray-200 shadow-lg dark:shadow-slate-800 dark:bg-slate-800 rounded-lg px-5 py-5">
+                <h1>
+                    Free Game
+                    <div class="font-semibold">
+                        Emily is Away
+                    </div>
+                    <div class="text-gray-300">
+                        <a class="text-blue-500" href="https://steamcommunity.com/sharedfiles/filedetails/?id=575931788"><br/>-> Guide</a>
+                    </div>
+                </h1>
+            </div>
+            <div class="container dark:text-white bg-gray-200 shadow-lg dark:shadow-slate-800 dark:bg-slate-800 rounded-lg px-5 py-5">
+                <h1>
+                    Free Game
+                    <div class="font-semibold">
+                        Loading Screen Simulator
+                    </div>
+                    <div class="text-gray-300">
+                        <a class="text-blue-500" href="https://steamcommunity.com/sharedfiles/filedetails/?id=1086390268"><br/>-> Guide</a>
+                    </div>
+                </h1>
+            </div>
+            <div class="container dark:text-white bg-gray-200 shadow-lg dark:shadow-slate-800 dark:bg-slate-800 rounded-lg px-5 py-5">
+                <h1>
+                    Free Game
+                    <div class="font-semibold">
+                        The Plan
+                    </div>
+                    <div class="text-gray-600 dark:text-gray-400">
+                        -> Guide : After playing, press the author name
+                    </div>
+                </h1>
+            </div>
+            <div class="container dark:text-white bg-gray-200 shadow-lg dark:shadow-slate-800 dark:bg-slate-800 rounded-lg px-5 py-5">
+                <h1>
+                    Free Game
+                    <div class="font-semibold">
+                        One Thousand Lies
+                    </div>
+                    <div class="text-gray-300">
+                        <a class="text-blue-500" href="https://steamcommunity.com/sharedfiles/filedetails/?id=575931788"><br/>-> Guide </a>
+                    </div>
+                </h1>
+            </div>
+            <div class="container dark:text-white bg-gray-200 shadow-lg dark:shadow-slate-800 dark:bg-slate-800 rounded-lg px-5 py-5">
+                <h1>
+                    Free Game
+                    <div class="font-semibold">
+                        Carpe Diem
+                    </div>
+                    <div class="text-gray-600 dark:text-gray-400">
+                        <br/>>Guide : Just press TAB and wait
+                    </div>
+                </h1>
+            </div>
+        </div>
+    </div>
+    <div id="placeholder">
+        <br/>
+        <br/>
+    </div>
+    <script src="app.js"></script>
+    <script src="https://unpkg.com/flowbite@1.4.1/dist/flowbite.js"></script>
+</body>
+</html>
