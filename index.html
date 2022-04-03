@@ -7,6 +7,7 @@
     <title>Maxiii's Website</title>
     <link rel="stylesheet" href="tailwind.css">
     <script>
+        //from https://flowbite.com/
         if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
             document.documentElement.classList.add('dark');
         } else {
@@ -14,11 +15,11 @@
         }
     </script>
 </head>
-<body class="font-sans bg-gradient-to-br from-pink-500 via-red-600 to-yellow-500">
+<body class="font-sans bg-gradient-to-br from-green-600 via-blue-800 to-slate-900">
     <nav class="container mx-auto flex mt-5 bg-white dark:bg-slate-800 rounded-lg py-3 px-3">
         <ul class="font-bold text-2xl pl-3">
             <h1 class="text-center dark:text-white flex">
-                <a href="/public/index.html" class="pt-1">Maxiii's Website</a>
+                <a href="/index.html" class="pt-1">Maxiii's Website</a>
             </h1>
         </ul>
         <ul class="flex flex-1 justify-end items-center dark:text-white gap-12 pr-3 ">
@@ -26,8 +27,8 @@
                     <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
                     <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
                 </button>
-                <a href="/public/tech.html" class="cursor-pointer">Tech</a>
-                <a href="/public/achievements.html" class="cursor-pointer">Easy Steam Achievements</a>
+                <a href="/tech.html" class="cursor-pointer">Tech</a>
+                <a href="/achievements.html" class="cursor-pointer">Easy Steam Achievements</a>
                 <a href="https://github.com/maxiamzocken/" class="cursor-pointer">Github</a>
                 <button id="dropdownDefault" data-dropdown-toggle="dropdown" class="text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">Socials <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button>
 
@@ -49,79 +50,70 @@
                 </div>
         </ul>
     </nav>
-    <div id="setup welcome" class="container mx-auto flex items-center mt-10 bg-gray-200 shadow-xl dark:shadow-slate-800 dark:bg-slate-800 rounded-lg p-0">
-        <img src="pictures/setup.jpg" alt="Setup" class="w-72 rounded-l-lg">
-        <h1 class="dark:text-white px-5 text-xl">
-            <div class="text-blue-600">
-                Maxiii#0001
+    <div id="welcome-text" class="container mx-auto flex items-center mt-16 bg-gray-200 dark:bg-slate-800 shadow-xl dark:shadow-slate-800 rounded-lg p-0">
+        <img src="pictures/picture-1.png" alt="Mountainbiking" class="w-96 rounded-l-lg">
+        <h1 class="text-black px-5">
+            <div class="underline dark:text-white">
+                Welcome to Website,  
             </div>
-            This is my setup, I created it mostly for Gaming, but I'm also using it for programming and for Video editing <br/><br/> 
+            <div class="dark:text-white">
+            I created something like this for the first time and used "Tailwind", this is the result <br/><br/>
+            Name : Maxiii <br/> 
+            Hobbies : mountainbiking, gaming, <a href="https://github.com/maxiamzocken/" class="text-blue-700 dark:text-blue-500">programming</a>, 
+            listening to <a href="https://open.spotify.com/user/lvnm8ira3fov1e6er4ztnjvu1" class="text-blue-700 dark:text-blue-500">music</a> <br/>
+            Located : in Germany 🇩🇪
+            </div>
+
         </h1>
     </div>
-    <div id="tech list" class="container mx-auto flex items-center mt-7 bg-gray-200 dark:bg-slate-800 dark:shadow-slate-800 shadow-xl rounded-lg px-5 py-5">
-        <h1 class="dark:text-white">
-            <div class="font-semibold">
-                My Computer
-            </div>
-            <br/><br/>
-            CPU : AMD Ryzen 5 2600<br/>
-            GPU : Gainward GTX 1660 OC<br/>
-            RAM : Crucial Ballisticx Sport 2x8GB DDR4<br/>
-            SSD : Kingston A400 240GB<br/>
-            HDD1 : Toshiba P300 1TB<br/>
-            HDD2 : Seagate Barracuda 2TB
-        </h1>
-    </div>
-    <div class="container mx-auto flex items-center mt-7 bg-gray-200 dark:bg-slate-800 dark:shadow-slate-800 shadow-xl rounded-lg px-5 py-5 dark:text-white">
+    <div id="github-repos" class="container mx-auto flex mt-6 bg-gray-200 dark:bg-slate-800 shadow-xl rounded-lg p-0 dark:shadow-slate-800 px-5 py-5">
         <h1>
-            <div class="font-semibold">
-            <br/>
-            My Equipment
+            <div class="font-semibold dark:text-white">
+                Github Repo's
+            </div><br/>
+            <li>
+                <a href="https://github.com/MaxiAmZocken/My-Stuff" class="text-blue-700 dark:text-blue-500">My Stuff</a>
+            </li>
+            <li>
+                <a href="https://github.com/MaxiAmZocken/Better-Discord-Plugins" class="text-blue-700 dark:text-blue-500">Better Discord Plugins</a>
+            </li>
+            <li>
+                <a href="https://github.com/MaxiAmZocken/Python-Projects" class="text-blue-700 dark:text-blue-500">Python Projects</a>
+            </li>
+            <li>
+                <a href="https://github.com/MaxiAmZocken/AutoHotkey-Projects" class="text-blue-700 dark:text-blue-500">AutoHotkey-Projects</a>
+            </li>
+            <li>
+                <a href="https://github.com/MaxiAmZocken/maxiamzocken.github.io" class="text-blue-700 dark:text-blue-500">Website Repo</a>
+            </li><br/>
+            <div class="text-gray-700 dark:text-gray-500">
+                Press on the names to get to the Repositories
             </div>
-            <br/>
-            Keyboard 1 : Royal Kludge RK61<br/>
-            Keyboard 2 : Logitech G910<br/>
-            Mouse 1 : Glorious Model 0<br/>
-            Mouse 2 : Logitech G502<br/>
-            Headphones : Beyerdynamic DT770 80Ω<br/>
-            Microphone : Blue Snowball ICE<br/>
-            Camera : Canon EOS 1300D<br/>
-            Wheel : Logitech G920<br/>
+        </h1>
+        <h2 class="px-5 py-5 dark:text-gray-400 text-gray-600">
+           <br/> <br/> // I'm not a really good programmer, <br/> so don't expect much from looking them up 😅
+        </h2>
+    </div>
+    <div id="setup welcome" class="container mx-auto flex items-center mt-6 bg-gray-200 shadow-xl dark:shadow-slate-800 dark:bg-slate-800 rounded-lg px-5 py-5">
+        <h1>
+            <div class="font-semibold dark:text-white">
+                Latest Youtube Videos
+            </div><br/>
+            <div class="flex gap-12 md:grid-rows-2">  
+                    <iframe src="https://www.youtube.com/embed/P02P8VoHAYA" title="YouTube video player 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/oIQAiguwKBk" title="YouTube video player 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
         </h1>
     </div>
-    <div class="container mx-auto flex items-center mt-7 bg-gray-200 dark:bg-slate-800 dark:shadow-slate-800 shadow-xl rounded-lg px-5 py-5 dark:text-white">
-        <h1>
-            <div class="font-semibold">
-                <br/>
-                Portable Stuff
-            </div>
-            <br/>
-            Smartphone : iPhone XS<br/>
-            Tablet : iPad Air 4<br/>
-            Headphones : Airpods 1<br/>
-            Powerbank Ravpower 26800<br/>
-            Watch : Garmin Forerunner 735XT<br/>
-        </h1>
+    <div id="placeholder">
+        <br/>
+        <br/>
     </div>
-    <div class="container mx-auto flex items-center mt-7 bg-gray-200 dark:bg-slate-800 dark:shadow-slate-800 shadow-xl rounded-lg px-5 py-5 dark:text-white">
-        <h1>
-            <div class="font-semibold">
-                <br/>
-                Software
-            </div>
-            <br/>
-            Editor : Visual Studio Code<br/>
-            Short Editor : Sublime Text<br/>
-            Browser : Google Chrome<br/>
-            Recording : OBS Studio<br/>
+    <footer>
+        <h1 class="text-right dark:text-white pr-5">
+            <br/>Early Access
         </h1>
-    
-</div>
-<div id="placeholder">
-    <br/>
-    <br/>
-    <br/>
-</div>
+    </footer>
     <script src="app.js"></script>
     <script src="https://unpkg.com/flowbite@1.4.1/dist/flowbite.js"></script>
 </body>
