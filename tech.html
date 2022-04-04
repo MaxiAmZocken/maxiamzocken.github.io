@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#1e293b">
     <title>Maxiii's Website</title>
     <link rel="stylesheet" href="tailwind.css">
     <script>
@@ -15,42 +16,47 @@
     </script>
 </head>
 <body class="font-sans bg-gradient-to-br from-pink-500 via-red-600 to-yellow-500">
-    <nav class="container mx-auto flex mt-5 bg-white dark:bg-slate-800 rounded-lg py-3 px-3">
-        <ul class="font-bold text-2xl pl-3">
-            <h1 class="text-center dark:text-white flex">
-                <a href="/index.html" class="pt-1">Maxiii's Website</a>
-            </h1>
-        </ul>
-        <ul class="flex flex-1 justify-end items-center dark:text-white gap-12 pr-3 ">
-                <button id="theme-toggle" type="button" class="bg-gray-200 dark:bg-slate-700 text-gray-500 dark:text-gray-400 hover:animate-bounce rounded-lg text-sm p-2.5">
-                    <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
-                    <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
-                </button>
-                <a href="/tech.html" class="cursor-pointer">Tech</a>
-                <a href="/achievements.html" class="cursor-pointer">Easy Steam Achievements</a>
-                <a href="https://github.com/maxiamzocken/" class="cursor-pointer">Github</a>
-                <button id="dropdownDefault" data-dropdown-toggle="dropdown" class="text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">Socials <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button>
-
+    <nav>
+        <ul class="container flex flex-wrap justify-between md:mt-5 items-center mx-auto bg-white dark:bg-slate-800 rounded-b-lg md:rounded-lg py-3 px-3">
+            <div id="Title" class="text-lg md:text-2xl">
+                <h1>
+                    <a href="/index.html" class="font-bold dark:text-white pl-2">
+                        Maxiii's Website
+                    </a>
+                </h1>
+            </div>
+            <div>
+                <a class="px-16 xl:px-48 invisible hidden lg:block">p</a>
+            </div>
+            <div id="buttons" class="hidden lg:block">
+                <a class="pr-12 dark:text-white" href="https://www.youtube.com/channel/UCKXu4_UtUGvSTRf_FZBMjpQ">Youtube</a>
+                <a class="pr-12 dark:text-white" href="achievements.htmlhttps://instagram.com/maxi_am_zocken">Instagram</a>
+                <a class="dark:text-white" href="https://twitter.com/Maxi_am_zocken">Twitter</a>
+            </div>
+            <div id="dropdownbutton">
+                <button id="dropdownDefault" data-dropdown-toggle="dropdown" class="text-white bg-blue-700 flex hover:bg-blue-800 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">Pages <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button>
                 <div id="dropdown" class="hidden z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700">
                     <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefault">
                         <li>
-                        <a href="https://www.youtube.com/channel/UCKXu4_UtUGvSTRf_FZBMjpQ" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Youtube</a>
+                        <a href="tech.html" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Tech</a>
                         </li>
                         <li>
-                        <a href="https://instagram.com/maxi_am_zocken" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Instagram</a>
+                        <a href="achievements.html" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Achievements</a>
                         </li>
                         <li>
-                        <a href="https://twitter.com/Maxi_am_zocken" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Twitter</a>
-                        </li>
-                        <li>
-                        <a href="https://www.komoot.com/user/2095673550135" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Komoot</a>
+                        <a href="https://github.com/maxiamzocken" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Github</a>
                         </li>
                     </ul>
                 </div>
+            </div>
+            <button id="theme-toggle" type="button" class="bg-gray-200 dark:bg-slate-700 text-gray-500 dark:text-gray-400 hover:animate-bounce rounded-lg text-sm p-2.5">
+                <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+                <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+            </button>
         </ul>
     </nav>
-    <div id="setup welcome" class="container mx-auto flex items-center mt-10 bg-gray-200 shadow-xl dark:shadow-slate-800 dark:bg-slate-800 rounded-lg p-0">
-        <img src="pictures/setup.jpg" alt="Setup" class="w-72 rounded-l-lg">
+    <div id="welcome-text" class="container mx-auto items-center grid grid-cols-1 grid-rows-2 md:flex mt-12 bg-gray-200 dark:bg-slate-800 shadow-xl dark:shadow-slate-800 rounded-lg">
+        <img src="pictures/setup.jpg" alt="" class="md:w-96 md:h-44 md:rounded-l-lg md:rounded-none rounded-t-lg md:pb-0">
         <h1 class="dark:text-white px-5 text-xl">
             <div class="text-blue-600">
                 Maxiii#0001
