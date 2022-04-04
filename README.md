@@ -3,4 +3,4 @@
 - [ ] create containers as grids
 - [ ] add pictures in achievement.hmtl
 - [ ] fix youtube embeds
-- [x] mobile support #1
+- [x] mobile support
