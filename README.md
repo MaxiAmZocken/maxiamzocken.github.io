@@ -6,3 +6,5 @@ Welcome to the repository of my website, if you're interested how I made it you 
 - [ ] add pictures in achievement.hmtl
 - [ ] fix youtube embeds
 - [x] mobile support
+- [ ] add home button in dropdown
+- [ ] fix instagram button
