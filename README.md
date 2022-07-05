@@ -5,7 +5,7 @@ Welcome to the repository of my website, if you're interested how I made it you 
 - [x] mobile support
 - [x] add home button in dropdown
 - [x] fix instagram button
-- [ ] create containers as grids
-- [ ] add pictures in achievement.hmtl
-- [ ] fix youtube embeds
+- [x] create containers as grids
+- [x] add pictures in achievement.hmtl
+- [x] fix youtube embeds
 
