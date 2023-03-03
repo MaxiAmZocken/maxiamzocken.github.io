@@ -4,137 +4,76 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#1e293b">
-    <title>Maxiii's Website</title>
-    <link rel="stylesheet" href="tailwind.css">
-    <link rel="icon" type="image/png" href="pictures/favicon.png"/>
-    <script>
-        //from https://flowbite.com/
-        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-            document.documentElement.classList.add('dark');
-        } else {
-            document.documentElement.classList.remove('dark')
-        }
-    </script>
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body class="font-sans bg-gradient-to-br from-rose-700 via-blue-700 to-slate-900">
-    <nav>
-        <ul class="container flex flex-wrap justify-between md:mt-5 items-center mx-auto bg-white dark:bg-slate-800 rounded-b-lg md:rounded-lg py-3 px-3">
-            <div id="Title" class="text-lg md:text-2xl">
-                <h1>
-                    <a href="/index.html" class="font-bold dark:text-white pl-2">
-                        Maxiii's Website
-                    </a>
-                </h1>
-            </div>
-            <div>
-                <a class="px-16 xl:px-48 invisible hidden lg:block">p</a>
-            </div>
-            <div id="buttons" class="hidden lg:block">
-                <a class="pr-12 dark:text-white" href="https://www.youtube.com/channel/UCKXu4_UtUGvSTRf_FZBMjpQ">Youtube</a>
-                <a class="pr-12 dark:text-white" href="https://instagram.com/maxi_am_zocken">Instagram</a>
-                <a class="dark:text-white" href="https://twitter.com/Maxi_am_zocken">Twitter</a>
-            </div>
-            <div id="dropdownbutton">
-                <button id="dropdownDefault" data-dropdown-toggle="dropdown" class="text-white bg-blue-700 flex hover:bg-blue-800 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">Pages <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button>
-                <div id="dropdown" class="hidden z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700">
-                    <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefault">
-                        <li>
-                            <a href="index.html" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">🏠 Home</a>
-                        </li>
-                        <li>
-                            <a href="tech.html" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">🪛 Tech</a>
-                        </li>
-                        <li>
-                            <a href="achievements.html" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">🎴 Achievements</a>
-                        </li>
-                        <li>
-                            <a href="https://github.com/maxiamzocken" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">😺 Source Code</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <button id="theme-toggle" type="button" class="bg-gray-200 dark:bg-slate-700 text-gray-500 dark:text-gray-400 hover:animate-bounce rounded-lg text-sm p-2.5">
-                <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
-                <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
-            </button>
-        </ul>
-    </nav>
-    <div id="welcome-text" class="container mx-auto items-center grid grid-cols-1 grid-rows-2 md:flex mt-12 bg-gray-200 dark:bg-slate-800 shadow-xl dark:shadow-slate-800 rounded-lg">
-        <img src="pictures/picture-1.png" alt="Mountainbiking" class="md:w-96 md:h-44 md:rounded-l-lg md:rounded-none rounded-t-lg pb-10 md:pb-0">
-        <h1 class="text-black px-5">
-            <div class="dark:text-white font-semibold text-xl">
-                Welcome to Website
-            </div>
-            <div class="dark:text-white">
-            <br/>
-            I created a Website this for the first time and used "Tailwindcss". This is the result :)
-            <br/>
-            <br/>
-            Name : Maxiii
-            <br/>
-            Hobbies : mountainbiking, gaming, <a href="https://github.com/maxiamzocken/" class="text-blue-700 dark:text-blue-500">programming</a>, 
-            listening to <a href="https://open.spotify.com/user/lvnm8ira3fov1e6er4ztnjvu1" class="text-blue-700 dark:text-blue-500">music</a>
-            </div>
-
+<body>
+    <center>
+        <h1 class="navigation">
+            <a class="navactive" href="index.html">Portfolio</a>
+            <a href="tech.html">Tech</a>
         </h1>
-    </div>
-    <div id="github-repos" class="container mx-auto mt-6 bg-gray-200 dark:bg-slate-800 shadow-xl rounded-lg p-0 dark:shadow-slate-800 px-5 py-5">
-        <div class="font-semibold dark:text-white">
-            Github Repositories
-        </div><br/>
-        <div class="grid grid-cols-1 md:grid-cols-2">
-            <h1>
-
-                <li>
-                    <a href="https://github.com/MaxiAmZocken/My-Stuff" class="text-blue-700 dark:text-blue-500">My Stuff</a>
-                </li>
-                <li>
-                    <a href="https://github.com/MaxiAmZocken/Better-Discord-Plugins" class="text-blue-700 dark:text-blue-500">Better Discord Plugins</a>
-                </li>
-                <li>
-                    <a href="https://github.com/MaxiAmZocken/Python-Projects" class="text-blue-700 dark:text-blue-500">Python Projects</a>
-                </li>
-                <li>
-                    <a href="https://github.com/MaxiAmZocken/AutoHotkey-Projects" class="text-blue-700 dark:text-blue-500">AutoHotkey-Projects</a>
-                </li>
-                <li>
-                    <a href="https://github.com/MaxiAmZocken/maxiamzocken.github.io" class="text-blue-700 dark:text-blue-500">Website Repo</a>
-                </li><br/>
-                <div class="text-gray-700 dark:text-gray-500">
-                    Press on the names to get to the Repositories
-                </div>
-            </h1>
-            <h2 class="px-5 py-5 dark:text-gray-400 text-gray-600">
-                <br/> // I'm not a really good programmer, <br/> so don't expect much from looking them up 😅
-            </h2>
+    </center>
+    <div class="box box1">
+        <h2>Basic Informations</h2>
+        <hr color="#d8d8d8">
+        <div class="box1container">
+            <img src="https://cdn.discordapp.com/avatars/391972709522866176/68adc7b2b2232c7a1c51e3ea4f1d9753.png" alt="" class="box1item1">
+            <div class="box1item2">Maxiii</div>
+            <div class="box1item3">Born in 2005 <br> Hobbies : Gaming, MTB, Tech Enthusiast</div>
         </div>
     </div>
-    <div id="youtube videos" class="container mx-auto items-center mt-6 bg-gray-200 shadow-xl dark:shadow-slate-800 dark:bg-slate-800 rounded-lg px-5 py-5 pb-6">
-        <h1>
-            <div class="font-semibold dark:text-white">
-                Latest Youtube Videos
-            </div>
-            <div class="grid grid-cols-1 grid-rows-3 md:grid-cols-3 md:grid-rows-1 gap-5 justify-items-center pt-3">
-                    <div>
-                        <iframe class="shadow-lg shadow-slate-600 dark:shadow-slate-800 rounded-lg" width="400" height="225" src="https://www.youtube.com/embed/rk9RCG7WLZA?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                    </div>
-                    <div>
-                        <iframe class="shadow-lg shadow-slate-600 dark:shadow-slate-800 rounded-lg" width="400" height="225" src="https://www.youtube.com/embed/P0Yk5gf8sns?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                    </div>
-                    <div>
-                        <iframe class="shadow-lg shadow-slate-600 dark:shadow-slate-800 rounded-lg" width="400" height="225" src="https://www.youtube.com/embed/x7Kp7q-KOiE?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                    </div>
-            </div><br/>
-        </h1>
+    <div class="box box2">
+        <h2>Skills</h2>
+        <hr color="#d8d8d8">
+        <br>
+        <div class="iconcontainer">
+            <a href="https://whatwg.org/"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="48" height="48" viewBox="0 0 48 48"><path fill="#E65100" d="M41,5H7l3,34l14,4l14-4L41,5L41,5z"></path><path fill="#FF6D00" d="M24 8L24 39.9 35.2 36.7 37.7 8z"></path><path fill="#FFF" d="M24,25v-4h8.6l-0.7,11.5L24,35.1v-4.2l4.1-1.4l0.3-4.5H24z M32.9,17l0.3-4H24v4H32.9z"></path><path fill="#EEE" d="M24,30.9v4.2l-7.9-2.6L15.7,27h4l0.2,2.5L24,30.9z M19.1,17H24v-4h-9.1l0.7,12H24v-4h-4.6L19.1,17z"></path></svg></a>
+            <a href="https://www.w3.org/Style/CSS/Overview.en.html"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="48" height="48" viewBox="0 0 48 48"><path fill="#0277BD" d="M41,5H7l3,34l14,4l14-4L41,5L41,5z"></path><path fill="#039BE5" d="M24 8L24 39.9 35.2 36.7 37.7 8z"></path><path fill="#FFF" d="M33.1 13L24 13 24 17 28.9 17 28.6 21 24 21 24 25 28.4 25 28.1 29.5 24 30.9 24 35.1 31.9 32.5 32.6 21 32.6 21z"></path><path fill="#EEE" d="M24,13v4h-8.9l-0.3-4H24z M19.4,21l0.2,4H24v-4H19.4z M19.8,27h-4l0.3,5.5l7.9,2.6v-4.2l-4.1-1.4L19.8,27z"></path></svg></a>
+            <a href="https://www.python.org/"><img src="https://cdn-icons-png.flaticon.com/512/5968/5968350.png" alt=""></a>
+            <a href="https://www.microsoft.com/en-us/windows?r=1"><img src="https://cdn-icons-png.flaticon.com/512/5261/5261303.png" alt=""></a>
+            <a href="https://www.autohotkey.com/"><img src="https://raw.githubusercontent.com/Ixiko/AHK-Forum/master/images/AHK%20main%20icon.png" alt=""></a>
+        </div>
     </div>
-    <div id="placeholder">
-        <br/>
-        <br/>
+    <div class="box box3">
+        <h2>Social Media</h2>
+        <hr color="#d8d8d8">
+        <br>
+        <div class="iconcontainer">  
+            <a href="https://instagram.com/void_Maxiii"><img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt=""></a>
+            <a href="https://twitter.com/maxi_am_zocken"><img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt=""></a>
+            <a href="https://twitch.tv/void_Maxiii"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111668.png" alt=""></a>
+        </div>
     </div>
-    <footer>
-        <h1 class="text-right dark:text-white pr-5">
-            <br/>Early Access
-        </h1>
-    </footer>
-    <script src="app.js"></script>
-    <script src="https://unpkg.com/flowbite@1.4.1/dist/flowbite.js"></script>
+    <div class="box box4">
+        <h2>Projects</h2>
+        <hr color="d8d8d8">
+        <br>
+        <div class="projectscontainer">
+            <b>Personal Website</b>
+            <br>
+            <img src="pictures/website.png" alt="">
+            <p>Technically it was written with HTML and CSS, but I used Tailwind CSS to create the website,
+                so it was not completely my work, but I'm working on a new website to publish in the future
+            </p>
+            <br>
+            <p>Link : <a href="https://maxiamzocken.github.io">https://maxiamzocken.github.io</a></p>
+            <p>Source Code : <a href="https://github.com/maxiamzocken/maxiamzocken.github.io">https://github.com/maxiamzocken/maxiamzocken.github.io</a></p>
+        </div>
+        <br>
+        <div class="projectscontainer">
+            <b>TruckersMP Company Website</b>
+            <br>
+            <img src="pictures/website2.png" alt="">
+            <p>I created this website for fun, because we played a lot of ETS2 and I created this TruckersMP
+                Company, so I thought it would be a funny idea to create this Page
+            </p>
+            <br>
+            <p>Link : <a href="https://maxiiischool.github.io">https://maxiiischool.github.io</a></p>
+            <p>Source Code : <a href="https://github.com/maxiiischool/maxiiischool.github.io">https://github.com/maxiiischool/maxiiischool.github.io</a></p>
+        </div>
+        <br>
+    </div>
+    <br>
 </body>
 </html>

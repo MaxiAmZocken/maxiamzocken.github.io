@@ -1,0 +1,119 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: white;
+    background: rgb(24, 29, 36);
+}
+
+h1 a {
+    color: white;
+    text-decoration: none;
+}
+
+h1 .navactive {
+    text-decoration: underline;
+}
+
+.box {
+    border-radius: 7px;
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+    margin-top: 25px;
+    box-shadow: 0px 3px 10px 0px black;
+}
+
+.iconcontainer {
+    display: flex;
+    justify-content: center;
+}
+
+.iconcontainer a img,svg{
+    width: 36px;
+    height: 36px;
+    margin: 6px;
+    padding: 7px;
+    border-radius: 7px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.855) 80%, rgba(213, 213, 213, 0.855)100%);
+}
+
+.box1 {
+    background: linear-gradient(0deg, rgb(106, 1, 1) 0%, rgba(191, 0, 0, 0.783)100%);
+}
+
+.box1container {
+    display: grid;
+    grid-template-columns: 120px;
+    grid-template-areas: 
+    "avatar name"
+    "avatar info";
+    padding: 10px;
+}
+.box1item1 {
+    grid-area: avatar;
+    border-radius: 100%;
+    width: 100px;
+}
+.box1item2 {
+    grid-area: name;
+    font-weight: bold;
+    text-align: left;
+    font-size: 26px;
+}
+.box1item3 {
+    grid-area: info;
+    text-align: left;
+}
+
+.box2 {
+    background: linear-gradient(0deg, rgb(3, 1, 146) 0%, rgba(11, 0, 227, 0.783)100%);
+}
+
+.box3 {
+    background: linear-gradient(0deg, rgba(122, 0, 98, 0.938) 0%, rgba(166, 0, 133, 0.978)100%);
+}
+
+.box4 {
+    background: linear-gradient(0deg, rgb(4, 134, 0) 0%, rgba(0, 227, 8, 0.783)100%);
+}
+
+.projectscontainer {
+    text-align: left;
+    margin: 10px;
+    background:rgb(71, 71, 71);
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 3px 10px 0px black;
+}
+
+.projectscontainer b {
+    letter-spacing: 1px;
+    font-size: 22px;
+}
+
+.projectscontainer img {
+    margin: 7px;
+    max-width: 95%;
+    border-radius: 4px;
+    border: solid white 1px;
+    box-shadow: 0px 3px 10px 0px black;
+}
+
+.projectscontainer p a {
+    color: rgb(0, 140, 255);
+}
+
+.list{
+    text-align: left;
+    padding: 12px;
+}
+
+@media only screen and (max-width: 620px) {
+    .box {
+      max-width: 95%;
+    }
+  }

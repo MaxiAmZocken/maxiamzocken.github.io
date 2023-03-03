@@ -4,134 +4,46 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#1e293b">
-    <title>Maxiii's Website</title>
-    <link rel="stylesheet" href="tailwind.css">
-    <script>
-        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-            document.documentElement.classList.add('dark');
-        } else {
-            document.documentElement.classList.remove('dark')
-        }
-    </script>
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body class="font-sans bg-gradient-to-br from-pink-500 via-red-600 to-yellow-500">
-    <nav>
-        <ul class="container flex flex-wrap justify-between md:mt-5 items-center mx-auto bg-white dark:bg-slate-800 rounded-b-lg md:rounded-lg py-3 px-3">
-            <div id="Title" class="text-lg md:text-2xl">
-                <h1>
-                    <a href="/index.html" class="font-bold dark:text-white pl-2">
-                        Maxiii's Website
-                    </a>
-                </h1>
-            </div>
-            <div>
-                <a class="px-16 xl:px-48 invisible hidden lg:block">p</a>
-            </div>
-            <div id="buttons" class="hidden lg:block">
-                <a class="pr-12 dark:text-white" href="https://www.youtube.com/channel/UCKXu4_UtUGvSTRf_FZBMjpQ">Youtube</a>
-                <a class="pr-12 dark:text-white" href="https://instagram.com/maxi_am_zocken">Instagram</a>
-                <a class="dark:text-white" href="https://twitter.com/Maxi_am_zocken">Twitter</a>
-            </div>
-            <div id="dropdownbutton">
-                <button id="dropdownDefault" data-dropdown-toggle="dropdown" class="text-white bg-blue-700 flex hover:bg-blue-800 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">Pages <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button>
-                <div id="dropdown" class="hidden z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700">
-                    <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefault">
-                        <li>
-                            <a href="index.html" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">🏠 Home</a>
-                        </li>
-                        <li>
-                            <a href="tech.html" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">🪛 Tech</a>
-                        </li>
-                        <li>
-                            <a href="achievements.html" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">🎴 Achievements</a>
-                        </li>
-                        <li>
-                            <a href="https://github.com/maxiamzocken" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">😺 Source Code</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <button id="theme-toggle" type="button" class="bg-gray-200 dark:bg-slate-700 text-gray-500 dark:text-gray-400 hover:animate-bounce rounded-lg text-sm p-2.5">
-                <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
-                <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
-            </button>
-        </ul>
-    </nav>
-    <div id="welcome-text" class="container mx-auto items-center grid grid-cols-1 grid-rows-2 md:flex mt-12 bg-gray-200 dark:bg-slate-800 shadow-xl dark:shadow-slate-800 rounded-lg">
-        <img src="pictures/setup.jpg" alt="" class="md:h-48 md:rounded-l-lg md:rounded-none rounded-t-lg md:pb-0">
-        <h1 class="dark:text-white px-5 text-xl">
-            <div class="text-blue-600">
-                Maxiii#0001
-            </div>
-            This is my setup, I created it mostly for Gaming, but I'm also using it for programming and for Video editing <br/><br/> 
+<body>
+    <center>
+        <h1 class="navigation">
+            <a href="index.html">Portfolio</a>
+            <a class="navactive" href="tech.html">Tech</a>
         </h1>
+    </center>
+    <div class="box box1">
+        <h2>Gaming PC</h2>
+        <hr color="#d8d8d8">
+        <div class="list">
+            CPU : Intel Core i7 13400F <br>
+            GPU : ASUS GeForce RTX 3060 Ti OC 8GB <br>
+            RAM : Corsair Vengeance RGB PRO 16GB <br>
+            SSD : Kingston M.2 1TB <br>
+            HDD : Seagate Barracuda 2TB
+        </div>
     </div>
-    <div id="tech list" class="container mx-auto flex items-center mt-7 bg-gray-200 dark:bg-slate-800 dark:shadow-slate-800 shadow-xl rounded-lg px-5 py-5">
-        <h1 class="dark:text-white">
-            <div class="font-semibold">
-                My Computer
-            </div>
-            <br/><br/>
-            CPU : AMD Ryzen 5 2600<br/>
-            GPU : Gainward GTX 1660 OC<br/>
-            RAM : Crucial Ballisticx Sport 2x8GB DDR4<br/>
-            SSD : Kingston A400 240GB<br/>
-            HDD1 : Toshiba P300 1TB<br/>
-            HDD2 : Seagate Barracuda 2TB
-        </h1>
+    <div class="box box2">
+        <h2>Setup</h2>
+        <hr color="#d8d8d8">
+        <div class="list">
+            Keyboard : Royal Kludge RK61 <br>
+            Mouse : Glorious Model 0 <br>
+            Headphones : Beyerdynamic DT770 80Ω <br>
+            Microphone : Blue Snowball ICE <br>
+            Camera : Canon EOS 1300D <br>
+            Wheel : Logitech G920
+        </div>
     </div>
-    <div class="container mx-auto flex items-center mt-7 bg-gray-200 dark:bg-slate-800 dark:shadow-slate-800 shadow-xl rounded-lg px-5 py-5 dark:text-white">
-        <h1>
-            <div class="font-semibold">
-            <br/>
-            My Equipment
-            </div>
-            <br/>
-            Keyboard 1 : Royal Kludge RK61<br/>
-            Keyboard 2 : Logitech G910<br/>
-            Mouse 1 : Glorious Model 0<br/>
-            Mouse 2 : Logitech G502<br/>
-            Headphones : Beyerdynamic DT770 80Ω<br/>
-            Microphone : Blue Snowball ICE<br/>
-            Camera : Canon EOS 1300D<br/>
-            Wheel : Logitech G920<br/>
-        </h1>
+    <div class="box box3">
+        <h2>Settings</h2>
+        <hr color="#d8d8d8">
+        <div class="list">
+            DPI : 800 DPI
+        </div>
     </div>
-    <div class="container mx-auto flex items-center mt-7 bg-gray-200 dark:bg-slate-800 dark:shadow-slate-800 shadow-xl rounded-lg px-5 py-5 dark:text-white">
-        <h1>
-            <div class="font-semibold">
-                <br/>
-                Portable Stuff
-            </div>
-            <br/>
-            Smartphone : iPhone XS 256GB<br/>
-            Tablet : iPad Air 4 64GB<br/>
-            Headphones : Airpods 1<br/>
-            Powerbank Ravpower 26800 mAh<br/>
-            Watch : Garmin Forerunner 735XT<br/>
-        </h1>
-    </div>
-    <div class="container mx-auto flex items-center mt-7 bg-gray-200 dark:bg-slate-800 dark:shadow-slate-800 shadow-xl rounded-lg px-5 py-5 dark:text-white">
-        <h1>
-            <div class="font-semibold">
-                <br/>
-                Software
-            </div>
-            <br/>
-            Editor : Visual Studio Code<br/>
-            Small Editor : Sublime Text<br/>
-            Browser : Google Chrome<br/>
-            Recording : OBS Studio<br/>
-        </h1>
-    
-</div>
-<div id="placeholder">
-    <br/>
-    <br/>
-    <br/>
-</div>
-    <script src="app.js"></script>
-    <script src="https://unpkg.com/flowbite@1.4.1/dist/flowbite.js"></script>
+    <br>
 </body>
 </html>
