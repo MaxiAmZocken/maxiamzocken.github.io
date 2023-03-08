@@ -103,7 +103,7 @@ h1 .navactive {
     box-shadow: 0px 3px 10px 0px black;
 }
 
-.projectscontainer p a {
+.projectscontainer a {
     color: rgb(0, 140, 255);
 }
 
@@ -114,6 +114,6 @@ h1 .navactive {
 
 @media only screen and (max-width: 620px) {
     .box {
-      max-width: 95%;
+        max-width: 95%;
     }
   }
