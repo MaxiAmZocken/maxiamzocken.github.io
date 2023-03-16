@@ -112,6 +112,10 @@ h1 .navactive {
     padding: 12px;
 }
 
+.linkcolor {
+    color: rgb(0, 140, 255)
+}
+
 @media only screen and (max-width: 620px) {
     .box {
         max-width: 95%;
