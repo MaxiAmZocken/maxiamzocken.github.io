@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Petrol Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="PetrolCalc.js"></script>
+</head>
+<body>
+    <nav>
+        <a class="title" href="index.html">← Back</a>
+    </nav>
+    <div class="container">
+        <p>
+            Welcome to my Petrol Price Calculator. 
+            With this page you can calculte the cost of your car trip 
+            <br><br>
+            Use "." instead of "," 
+        </p>
+        <br>
+        <p>Current Petrol Price (€):</p>
+        <input type="text" name="petrolprice" id="petrolprice">
+        <br><br>
+        <p>Average Fuel Consumption (l/100km):</p>
+        <input type="text" name="consumption" id="consumption">
+        <br><br>
+        <p>Distance (km) :</p>
+        <input type="text" name="distance" id="distance">
+        <br><br>
+        <p>There and back?</p>
+        <input type="checkbox" name="thereandback" id="thereandback" class="checkbox">
+        <br><br>
+        <button onclick="calculateCost()">Calculate Cost</button>
+        <br><br>
+        <p class="result" id="result"></p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Power Converter</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="PowerConv.js"></script>
+</head>
+<body>
+    <nav>
+        <a class="title" href="index.html">← Back</a>
+    </nav>
+    <div class="container">
+        <p>
+            Welcome to my Car Power Converter. 
+            With this page you can convert HP to KW and back. 
+            <br><br>
+            Use "." instead of ","
+            <br><br>
+            Either press <u>Enter</u> after entering your values or
+            use the <u>buttons</u> below
+        </p>
+        <br>
+        <p>Power in HP</p>
+        <input type="text" id="PS" onchange="PStoKW()">
+        <br><br>
+        <button onclick="PStoKW()">PS to KW</button>
+        <br><br>
+        <p>Power in KW</p>
+        <input type="text" id="KW" onchange="KWtoPS()">
+        <br><br>
+        <button onclick="KWtoPS()">KW to PS</button>
+        <br><br>
+        <p class="result" id="result"></p>
+    </div>
+</body>
+</html>

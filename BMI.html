@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="BMI.js"></script>
+</head>
+<body>
+    <nav>
+        <a class="title" href="index.html">← Back</a>
+    </nav>
+    <div class="container">
+        <p>
+            Welcome to my BMI Calculator. 
+            With this page you can check your current BMI. 
+            <br><br>
+            Use "." instead of ","
+            <br><br>
+            Either press <u>Enter</u> after entering your values or
+            use the <u>button</u> below
+        </p>
+        <br>
+        <p>Weight (Kilogramms)</p>
+        <input type="text" id="w">
+        <br><br>
+        <p>Height (Meters)</p>
+        <input type="text" id="h">
+        <br><br>
+        <button onclick="BMI()">Calculate</button>
+        <br><br>
+        <p id="bmi"></p>
+        <br><br>
+        <p id="result"></p>
+    </div>
+</body>
+</html>
