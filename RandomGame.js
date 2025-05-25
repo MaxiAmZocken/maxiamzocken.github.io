@@ -67,27 +67,32 @@ function savescore() {
         const scores = snapshot.val() || {};
         let existingKey = null;
 
-        for (let key in scores) {
-            if (scores[key].name.toLowerCase() === username.toLowerCase()) {
-                existingKey = key;
-                break;
-            }
+        if (!username) {
+            alert("Please enter a valid name")
         }
+        else{
+            for (let key in scores) {
+                if (scores[key].name.toLowerCase() === username.toLowerCase()) {
+                    existingKey = key;
+                    break;
+                }
+            }
 
-        if (existingKey) {
-            const updates = {};
-            updates['/scores/' + maxnumber + '/' + existingKey] = {
-                name: username,
-                score: guesscount,
-                range: maxnumber
-            };
-            update(ref(database), updates);
-        } else {
-            push(ref(database, "scores/" + maxnumber), {
-                name: username,
-                score: guesscount,
-                range: maxnumber
-            });
+            if (existingKey) {
+                const updates = {};
+                updates['/scores/' + maxnumber + '/' + existingKey] = {
+                    name: username,
+                    score: guesscount,
+                    range: maxnumber
+                };
+                update(ref(database), updates);
+            } else {
+                push(ref(database, "scores/" + maxnumber), {
+                    name: username,
+                    score: guesscount,
+                    range: maxnumber
+                });
+            }
         }
 
         // Scoreboard aktualisieren
