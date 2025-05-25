@@ -78,21 +78,28 @@ function savescore() {
                 }
             }
 
-            if (existingKey) {
-                const updates = {};
-                updates['/scores/' + maxnumber + '/' + existingKey] = {
-                    name: username,
-                    score: guesscount,
-                    range: maxnumber
-                };
-                update(ref(database), updates);
-            } else {
-                push(ref(database, "scores/" + maxnumber), {
-                    name: username,
-                    score: guesscount,
-                    range: maxnumber
+            if (scores.score < guesscount)
+                if (existingKey) {
+                    const updates = {};
+                    updates['/scores/' + maxnumber + '/' + existingKey] = {
+                        name: username,
+                        score: guesscount,
+                        range: maxnumber
+                    };
+                    update(ref(database), updates);
+                } 
+                else {
+                    push(ref(database, "scores/" + maxnumber), {
+                        name: username,
+                        score: guesscount,
+                        range: maxnumber
                 });
             }
+            else {
+                alert("Your previous score was better or equal, so we didn't save your current score")
+            }
+
+            
         }
 
         // Scoreboard aktualisieren
