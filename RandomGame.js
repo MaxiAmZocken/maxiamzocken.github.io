@@ -78,7 +78,7 @@ function savescore() {
                 }
             }
 
-            if (scores.score < guesscount)
+            if (scores[existingKey].score > guesscount) {
                 if (existingKey) {
                     const updates = {};
                     updates['/scores/' + maxnumber + '/' + existingKey] = {
@@ -93,7 +93,7 @@ function savescore() {
                         name: username,
                         score: guesscount,
                         range: maxnumber
-                });
+                });}
             }
             else {
                 alert("Your previous score was better or equal, so we didn't save your current score")
