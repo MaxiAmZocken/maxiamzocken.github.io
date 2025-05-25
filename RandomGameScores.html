@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Randomizer</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="RandomGame.js"></script>
+</head>
+<body>
+    <nav>
+        <a class="title" href="index.html">← Back</a>
+    </nav>
+    <div class="container">
+        <br><br>
+        <center>
+            <div class="result" id="scoreboard10">
+                <br><br>
+                <h3>🏆 Scoreboard</h3>
+                <p>Loading...</p>       
+            </div>
+            <br><br>
+            <div class="result" id="scoreboard100">
+                <br><br>
+                <h3>🏆 Scoreboard</h3>
+                <p>Loading...</p>       
+            </div>
+            <br><br>
+            <div class="result" id="scoreboard1000">
+                <br><br>
+                <h3>🏆 Scoreboard</h3>
+                <p>Loading...</p>       
+            </div>
+        </center>
+    </div>
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.8.1/firebase-app.js";
+        import { getDatabase, ref, push, query, orderByChild, update, onValue } from "https://www.gstatic.com/firebasejs/11.8.1/firebase-database.js";
+        const firebaseConfig = {
+            apiKey: "AIzaSyD3scLUCNsfb9JHgDMv2kz_5kS2oU2B6Tc",
+            authDomain: "number-game-database.firebaseapp.com",
+            databaseURL: "https://number-game-database-default-rtdb.europe-west1.firebasedatabase.app",
+            projectId: "number-game-database",
+            storageBucket: "number-game-database.firebasestorage.app",
+            messagingSenderId: "731396434823",
+            appId: "1:731396434823:web:b00e3c3c34331f602a4122"
+        };
+        const app = initializeApp(firebaseConfig);
+        const database = getDatabase(app);
+
+        const scoresRef10 = ref(database, "scores/10");
+        const scoresQuery10 = query(scoresRef10, orderByChild("score"));
+        const scoresRef100 = ref(database, "scores/100");
+        const scoresQuery100 = query(scoresRef100, orderByChild("score"));
+        const scoresRef1000 = ref(database, "scores/1000");
+        const scoresQuery1000 = query(scoresRef1000, orderByChild("score"));
+
+        onValue(scoresQuery10, (snapshot) => {
+        const scores = snapshot.val();
+        let output10 = "<h3>🏆 Scoreboard (10)</h3>";
+        if (scores) {
+            const sorted = Object.values(scores).sort((a, b) => a.score - b.score);
+            sorted.forEach(entry => {
+                output10 += `${entry.name}: ${entry.score} <br>`;
+            });
+        } 
+        else {
+            output10 += "Noch keine Scores!";
+        }
+        document.getElementById("scoreboard10").innerHTML = output10;
+        });
+        onValue(scoresQuery100, (snapshot) => {
+        const scores = snapshot.val();
+        let output100 = "<h3>🏆 Scoreboard (100)</h3>";
+        if (scores) {
+            const sorted = Object.values(scores).sort((a, b) => a.score - b.score);
+            sorted.forEach(entry => {
+                output100 += `${entry.name}: ${entry.score} <br>`;
+            });
+        } 
+        else {
+            output100 += "Noch keine Scores!";
+        }
+        document.getElementById("scoreboard100").innerHTML = output100;
+        });
+        onValue(scoresQuery1000, (snapshot) => {
+        const scores = snapshot.val();
+        let output1000 = "<h3>🏆 Scoreboard (1000)</h3>";
+        if (scores) {
+            const sorted = Object.values(scores).sort((a, b) => a.score - b.score);
+            sorted.forEach(entry => {
+                output1000 += `${entry.name}: ${entry.score} <br>`;
+            });
+        } 
+        else {
+            output1000 += "Noch keine Scores!";
+        }
+        document.getElementById("scoreboard1000").innerHTML = output1000;
+        });
+    </script>
+</body>
+</html>

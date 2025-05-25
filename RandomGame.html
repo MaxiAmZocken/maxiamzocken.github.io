@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Randomizer</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="RandomGame.js"></script>
+</head>
+<body>
+    <nav>
+        <a class="title" href="index.html">← Back</a>
+    </nav>
+    <div class="container">
+        <p id="description">
+            Welcome to the Random Number Game. <br>
+            On this page, you can play a game, where you have to guess a random
+            generated number in a specific range. 
+            <br><br>
+        </p>
+        <br>
+        <p id="text0">Enter the highest number you want to guess</p>
+        <input type="text" id="maxnumber">
+        <br><br>
+        <button id="start" onclick="game()">Start the game</button>
+        <br><br>
+        <p class="result" id="text1"></p>
+        <br><br>
+        <input style="display: none;" type="text" id="guess">
+        <br><br>
+        <button style="display: none;" id="guessbutton" onclick="userguess()">
+            Guess
+        </button>
+        <br><br>
+        <p class="result" id="result"></p>
+        <br><br>
+        <div id="guessednumberscontainer" class="guessednumbers">
+            Guessed Numbers (<b id="guesscount"></b>)<br>
+            <div id="guessednumbers" style="padding: 7px;"></div>
+        </div>
+        <p style="display: none;" id="usernameinfo">
+            Enter your username for the scroreboard
+        </p>
+        <input style="display: none;" type="text" id="username">
+        <br><br>
+        <button style="display: none;" id="savebutton" onclick="savescore()">
+            Save
+        </button>
+        <br><br>
+        <center>
+            <div class="result" id="scoreboard"></div>
+        </center>
+    </div>
+
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.8.1/firebase-app.js";
+        import { getDatabase, ref, push, query, orderByChild, update, onValue } from "https://www.gstatic.com/firebasejs/11.8.1/firebase-database.js";
+        const firebaseConfig = {
+            apiKey: "AIzaSyD3scLUCNsfb9JHgDMv2kz_5kS2oU2B6Tc",
+            authDomain: "number-game-database.firebaseapp.com",
+            databaseURL: "https://number-game-database-default-rtdb.europe-west1.firebasedatabase.app",
+            projectId: "number-game-database",
+            storageBucket: "number-game-database.firebasestorage.app",
+            messagingSenderId: "731396434823",
+            appId: "1:731396434823:web:b00e3c3c34331f602a4122"
+        };
+        const app = initializeApp(firebaseConfig);
+        const database = getDatabase(app);
+        window.database = database;
+        window.push = push;
+        window.onValue = onValue;
+        window.update = update;
+        window.ref = ref;
+    </script>
+</body>
+</html>
