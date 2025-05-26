@@ -48,13 +48,16 @@
         </button>
         <br><br>
         <center>
-            <div class="result" id="scoreboard"></div>
+            <div class="result" id="scoreboard" style="display: none;">
+                <h3>🏆 Scoreboard</h3>
+                <p>Loading...</p>   
+            </div>
         </center>
     </div>
 
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/11.8.1/firebase-app.js";
-        import { getDatabase, ref, push, query, orderByChild, update, onValue } from "https://www.gstatic.com/firebasejs/11.8.1/firebase-database.js";
+        import { getDatabase, get, ref, push, query, orderByChild, update, onValue } from "https://www.gstatic.com/firebasejs/11.8.1/firebase-database.js";
         const firebaseConfig = {
             apiKey: "AIzaSyD3scLUCNsfb9JHgDMv2kz_5kS2oU2B6Tc",
             authDomain: "number-game-database.firebaseapp.com",
@@ -71,6 +74,7 @@
         window.onValue = onValue;
         window.update = update;
         window.ref = ref;
+        window.get = get;
     </script>
 </body>
 </html>

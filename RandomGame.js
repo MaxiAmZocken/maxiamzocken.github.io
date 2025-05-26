@@ -61,62 +61,68 @@ function userguess() {
 }
 
 function savescore() {
+    document.getElementById("scoreboard").style.display = "block";
     const username = document.getElementById("username").value;
+    
+    if (!username) {
+        alert("Please enter a valid name");
+        return;
+    }
 
-    onValue(ref(database, "scores/" + maxnumber), (snapshot) => {
+    const scorePath = "scores/" + maxnumber;
+    const scoresRef = ref(database, scorePath);
+
+    get(scoresRef).then((snapshot) => {
         const scores = snapshot.val() || {};
         let existingKey = null;
 
-        if (!username) {
-            alert("Please enter a valid name")
+        for (let key in scores) {
+            if (scores[key].name.toLowerCase() === username.toLowerCase()) {
+                existingKey = key;
+                break;
+            }
         }
-        else{
-            for (let key in scores) {
-                if (scores[key].name.toLowerCase() === username.toLowerCase()) {
-                    existingKey = key;
-                    break;
-                }
+
+        data = {
+                name: username,
+                score: guesscount,
+                range: maxnumber
             }
 
-            if (scores[existingKey].score > guesscount) {
-                if (existingKey) {
-                    const updates = {};
-                    updates['/scores/' + maxnumber + '/' + existingKey] = {
-                        name: username,
-                        score: guesscount,
-                        range: maxnumber
-                    };
-                    update(ref(database), updates);
-                } 
-                else {
-                    push(ref(database, "scores/" + maxnumber), {
-                        name: username,
-                        score: guesscount,
-                        range: maxnumber
-                });}
-            }
-            else {
-                alert("Your previous score was better or equal, so we didn't save your current score")
-            }
-
+        if (!existingKey) {
+            push(scoresRef, data);
+            } 
+        
+        else if (scores[existingKey].score > guesscount) {
+            const updates = {};
+            updates['/scores/' + maxnumber + '/' + existingKey] = data;
+            update(ref(database), updates);
+        } 
             
+        else {
+            alert("Your previous score was better or equal, so we didn't save your current score"); 
         }
 
-        // Scoreboard aktualisieren
-        onValue(ref(database, "scores/" + maxnumber), (snapshot) => {
-            const scores = snapshot.val();
+    });
+
+    var delayInMilliseconds = 1000;
+    setTimeout(() => {
+        get(scoresRef).then((snapshot) => {
+            const updatedscores = snapshot.val();
             let output = "<h3>🏆 Scoreboard</h3>";
 
-            if (scores) {
-                const sorted = Object.values(scores).sort((a, b) => a.score - b.score);
+            if (updatedscores) {
+                const sorted = Object.values(updatedscores).sort((a, b) => a.score - b.score);
                 sorted.forEach(entry => {
                     output += `${entry.name}: ${entry.score}<br>`;
                 });
-            } else {
+            } 
+            
+            else {
                 output += "Noch keine Scores!";
             }
-
+            
             document.getElementById("scoreboard").innerHTML = output;
-        }, { onlyOnce: true });
-    }, { onlyOnce: true });
+        });
+    }, delayInMilliseconds);
 }
