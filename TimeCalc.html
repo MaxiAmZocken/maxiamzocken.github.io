@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="TimeCalc.js"></script>
+</head>
+<body>
+    <nav>
+        <a class="title" href="index.html">← Back</a>
+    </nav>
+    <div class="container">
+        <p>
+            Welcome to my Time Calculator. 
+            With this page, you can calculate times. Pretty self-explanatory. 
+            <br><br>
+        </p>
+        <br>
+        <p>Time 1 plus Time 2</p>
+        <input type="text" id="time1" placeholder="00:00" onchange="calculate1()">
+        <br>
+        <input type="text" id="time2" value="08:40" onchange="calculate1()">
+        <br>
+        <center>
+            <div class="result" id="result"></div>
+        </center>
+    </div>
+</body>
+</html>
