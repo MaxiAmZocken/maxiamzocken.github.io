@@ -28,14 +28,14 @@
         </center>
         <p>Which size does you pizza have? (cm)</p>
         <div id="round">
-            <input type="number" id="diameter" placeholder="diameter">
+            <input onchange="calcround()" type="number" id="diameter" placeholder="diameter">
             <br><br>
             <button onclick="calcround()">Calculate</button> 
         </div>
         <div id="square" style="display: none;">
-            <input type="number" id="side_a" placeholder="Side A">
+            <input onchange="calcsquare()" type="number" id="side_a" placeholder="Side A">
             <br><br>
-            <input type="number" id="side_b" placeholder="Side B">
+            <input onchange="calcsquare()" type="number" id="side_b" placeholder="Side B">
             <br><br>
             <button onclick="calcsquare()">Calculate</button> 
         </div>
