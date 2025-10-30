@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="PizzaCalc.js"></script>
+</head>
+<body>
+    <nav>
+        <a class="title" href="index.html">← Back</a>
+    </nav>
+    <div class="container">
+        <p>
+            Welcome to my Pizza Calculator. 
+            With this page you can calculate the size
+            of your pizza by choosing its shape and diameter. 
+            <br><br>
+        </p>
+        <br>
+        <p>Which shape is your Pizza?</p>
+        <center>
+            <select onchange="shapechange()" name="pizzashape" id="pizzashape">
+                <option value="round">🔴 Round</option>
+                <option value="square">🟥 Square</option>
+            </select>
+        </center>
+        <p>Which size does you pizza have? (cm)</p>
+        <div id="round">
+            <input type="number" id="diameter" placeholder="diameter">
+            <br><br>
+            <button onclick="calcround()">Calculate</button> 
+        </div>
+        <div id="square" style="display: none;">
+            <input type="number" id="side_a" placeholder="Side A">
+            <br><br>
+            <input type="number" id="side_b" placeholder="Side B">
+            <br><br>
+            <button onclick="calcsquare()">Calculate</button> 
+        </div>
+        <br><br>
+        <p class="result" id="result"></p>
+    </div>
+</body>
+</html>

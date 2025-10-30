@@ -56,6 +56,13 @@ button:active {
     transform: scale(1.2)
 }
 
+select {
+    font-size: 22px;
+    border: none;
+    border-radius: 8px;
+    margin: 16px;
+}
+
 .container {
     padding: 16px;
 }
